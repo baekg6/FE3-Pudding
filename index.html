@@ -51,6 +51,16 @@
 
         <script>
             console.log("┌─────────────────┐\n| 푸딩이 세상을 구한다 |\n└─────────────────┘\n　　ᕱ ᕱ  ||\n　 ( ･ω･ ||\n　 /　 つΦ");
+
+            pudding = document.getElementById("pudding-face");
+            pudding.addEventListener(
+                "click",
+                function (e) {
+                    console.log("button click");
+                    window.location.reload();
+                },
+                false
+            );
         </script>
     </body>
 </html>
