@@ -157,7 +157,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .pudding {
@@ -183,10 +184,11 @@ p {
 .header {
   position: relative;
   top: 4rem;
-  text-align: center;
+  margin: 30px auto auto;
 }
 .header .img-title {
   width: 65rem;
+  max-width: 100%;
 }
 .header .txt-info {
   position: relative;
@@ -318,9 +320,33 @@ p {
 
 .plate {
   width: 430px;
-  margin: 0 auto;
+  align-self: center;
   background: white;
   border-top: 30px solid white;
   border-left: 50px solid pink;
   border-right: 50px solid pink;
+}
+
+/* media query */
+@media (max-width: 768px) and (min-width: 390px) {
+  .header {
+    max-width: calc(100% - 5rem);
+  }
+  .img-title {
+    max-width: calc;
+  }
+  .txt-info {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .txt-info strong {
+    font-size: 2rem;
+  }
+  .pudding {
+    transform: scale(0.7);
+    top: 61px;
+  }
+  .plate {
+    max-width: calc(100% - 8rem);
+  }
 }/*# sourceMappingURL=pudding.css.map */
