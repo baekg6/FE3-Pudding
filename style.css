@@ -58,11 +58,11 @@
     }
 
     65% {
-        transform: translateX(-50%) translate(0px, 50px) rotate(30deg);
+        transform: translateX(-50%) translate(10px, 50px) rotate(30deg);
     }
     74% {
-        transform: translateX(-50%) translate(0px, -90px) rotate(20deg);
-        animation-timing-function: ease-out;
+        transform: translateX(-50%) translate(0px, -100px) rotate(20deg);
+        /* animation-timing-function: ease-out; */
     }
     100% {
         transform: translateX(-50%) translateY(0) rotate(15deg);
