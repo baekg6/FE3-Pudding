@@ -1,4 +1,5 @@
 /* animation */
+
 @keyframes jump-pudding {
     20% {
         transform: scale(1.2, 0.8);
@@ -29,26 +30,6 @@
     }
 }
 
-@keyframes jump-cream {
-    22% {
-        transform: translateY(40px);
-    }
-
-    36% {
-        transform: translate(-10px, -180px) rotate(-15deg);
-    }
-    64% {
-        transform: translate(0, 60px) rotate(0deg);
-    }
-    74% {
-        transform: translate(0, -90px) rotate(-5deg);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
 @keyframes jump-cherry {
     23% {
         transform: translateX(-50%) translateY(30px) rotate(15deg);
@@ -69,6 +50,26 @@
     }
 }
 
+@keyframes jump-cream {
+    22% {
+        transform: translateY(40px);
+    }
+
+    36% {
+        transform: translate(-10px, -180px) rotate(-15deg);
+    }
+    64% {
+        transform: translate(0, 60px) rotate(0deg);
+    }
+    74% {
+        transform: translate(0, -90px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .jump-cherry {
     animation: jump-cherry 2s ease alternate;
 }
@@ -82,9 +83,8 @@
     animation: blink-eye 2s ease alternate;
 }
 
-/* setting */
-
 /* reset */
+
 *,
 *::before,
 *::after {
@@ -106,11 +106,6 @@ p {
     margin: 0;
 }
 
-dl,
-dl * {
-    margin: 0;
-}
-
 .txt-hide {
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -125,45 +120,51 @@ dl * {
 .wrap {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 
-    justify-content: center;
+    justify-content: flex-end;
     align-content: center;
-    margin: 0;
 }
 
 .header {
     position: relative;
-
+    top: 4rem;
     text-align: center;
+}
+
+.pudding {
+    position: relative;
+    margin: 30px auto 0px;
+    width: 400px;
+    height: 400px;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: skyblue;
+    color: #f7d744;
+    padding: 40px;
 }
 
 /* design */
 
 .header .img-title {
-    padding: 3rem;
     width: 65rem;
-    max-width: calc(100%-20rem);
-    margin: auto;
 }
 
-header .txt-info {
-    position: relative;
-    top: -5rem;
+.header .txt-info {
+    white-space: nowrap;
     color: white;
-}
-
-.main {
-    margin: 0 auto;
-}
-
-.pudding {
+    font-size: 1.6rem;
     position: relative;
-    margin: 0px 50px;
-    width: 400px;
-    height: 500px;
+    top: -3rem;
+}
+
+.header .txt-info strong {
+    font-size: 2.4rem;
 }
 
 .pudding .cherry {
@@ -246,7 +247,7 @@ header .txt-info {
     top: 100px;
     width: 10px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 40%;
     background: rgb(85, 43, 25);
 }
 
@@ -265,6 +266,14 @@ header .txt-info {
     height: 20px;
     border: 5px solid rgb(85, 43, 25);
     border-radius: 10% 10% 50% 50%;
+}
+.face .mouth::before {
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    content: "";
+    width: 40px;
+    height: 10px;
 }
 
 .face .cheek {
@@ -294,24 +303,10 @@ header .txt-info {
     border-right: 50px solid pink;
 }
 
-/* footer */
-.footer {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    background-color: skyblue;
-    color: #f7d744;
-    padding: 30px;
-}
-
-.footer dl * {
-    font-style: normal;
-    display: inline-block;
-}
-
 .footer small {
+    white-space: nowrap;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 /* media query */
